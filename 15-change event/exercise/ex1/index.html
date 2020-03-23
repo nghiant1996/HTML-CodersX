@@ -1,1 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex1</title>
+</head>
+<body>
+	<h2>Binding value</h2>
+	<p id="display-place">Hello, </p>
+	<input id="input" type="text"/>
 
+	<script type="text/javascript">
+		var input = document.getElementById('input');
+		input.addEventListener('input', displayGretting);
+		function displayGretting(){
+			var displayPlace = document.getElementById('display-place');
+			displayPlace.textContent = 'Hello, ';
+			displayPlace.innerHTML += input.value;
+		}
+	</script>
+</body>
+</html>
