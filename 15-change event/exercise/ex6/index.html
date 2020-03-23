@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex6</title>
+</head>
+<body>
+	<h2>Step number</h2>
+	<button id="dec">-</button><span id="on-change">0</span><button id="inc">+</button>
+	<script type="text/javascript">
+		
+		var inc = document.getElementById('inc');
+		inc.addEventListener('click',increase);
+		var dec = document.getElementById('dec');
+		dec.addEventListener('click',decrease);
+		function increase(){
+			var onChange = document.getElementById('on-change');
+			var number = parseInt(onChange.textContent) + 1;
+			onChange.textContent = number.toString();
+		}
+		function decrease(){
+			var onChange = document.getElementById('on-change');
+			var number = parseInt(onChange.textContent) - 1;
+			onChange.textContent = number.toString();
+		}
+	</script>
+</body>
+</html>

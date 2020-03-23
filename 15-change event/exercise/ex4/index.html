@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex4</title>
+</head>
+<body>
+	<h2>To Do List</h2>
+	<input id="todo" type="text">
+	<button id="btn-add">Add</button>
+	<hr>
+	<div id="todo-list">
+		
+	</div>
+	<script type="text/javascript">
+		
+		var btnAdd = document.getElementById('btn-add');
+		btnAdd.addEventListener('click', addTodo);
+		function addTodo(){
+			var todo = document.getElementById('todo');
+			var todoList = document.getElementById('todo-list');
+			todoList.innerHTML += '<p>'+todo.value+'</p>';
+			todo.value = '';
+		}
+	</script>
+</body>
+</html>

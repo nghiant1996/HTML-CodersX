@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex3</title>
+</head>
+<body>
+	<h2>Hello</h2>
+	<p>What is your name?</p>
+	<input id="answer" type="text" />
+	<button id="answer-btn">Go</button>
+	<p id="greeting"></p>
+
+	<script type="text/javascript">
+		
+		var answerBtn = document.getElementById('answer-btn');
+		answerBtn.addEventListener('click', onAnswered);
+
+		function onAnswered(){
+			var answer = document.getElementById('answer');
+			var name = answer.value;
+			var greeting = document.getElementById('greeting');
+			greeting.innerHTML = 'Hello, '+ name;
+			answer.value = '';
+		}
+	</script>
+</body>
+</html>

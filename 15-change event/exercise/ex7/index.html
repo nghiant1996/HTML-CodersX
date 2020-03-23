@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex7</title>
+</head>
+<body>
+	<button id="btn-click">Click me</button>
+	<p id="noti"></p>
+	<script type="text/javascript">
+		btnClick = document.getElementById('btn-click');
+		btnClick.addEventListener('click',showNoti);
+		var flag = true;
+		function showNoti(){
+			var noti = document.getElementById('noti');
+			if(flag === true){
+				noti.textContent = 'You are amazing';
+				flag = false;
+			}else{
+				noti.textContent = '';
+				flag = true;
+			}
+		}
+	</script>
+</body>
+</html>

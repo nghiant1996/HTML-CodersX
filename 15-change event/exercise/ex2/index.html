@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex2</title>
+</head>
+<body>
+	<input id="color" type="color">
+	<p id="content" >This text line will change color rely on you</p>
 
+	<script type="text/javascript">
+		var colors = document.getElementById('color');
+		
+		color.addEventListener('input', function(){
+			var selectedColor = document.getElementById('color').value;
+			var changedContent = document.getElementById('content');
+			changedContent.style.color = selectedColor;
+
+		})
+
+
+	</script>
+</body>
+</html>
