@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>change event example</title>
+</head>
+<body>
 
+	<span>Age: </span>
+
+	<select id="age-filter">
+		<option>18</option>
+		<option>12</option>
+		<option>13</option>
+		<option>15</option>
+	</select>
+
+	<table id="student-table">
+		
+	</table>
+
+	<script type="text/javascript">
+		var students = [
+			{name: 'Nghia', age: 18},
+			{name: 'Nam', age: 12},
+			{name: 'Hieu', age: 13},
+			{name: 'Cuong', age: 12},
+			{name: 'Thuy', age: 15},
+		];
+
+		var ageFilter = document.getElementById('age-filter');
+		ageFilter.addEventListener('change', onAgeFilterChange)
+
+		render(students);
+
+		function render(students){
+			var studentTable = document.getElementById('student-table');
+			var content = students.map(function(student){
+				return '<tr><td>' + student.name + '</td><td>' + student.age + '</td></tr>';
+			});
+			studentTable.innerHTML = content.join('');
+		};
+
+		function onAgeFilterChange(){
+			var selectedAge = parseInt(ageFilter.value);
+			var filteredStudents = students.filter(function(student){
+				return student.age === selectedAge;
+			});
+			render(filteredStudents);
+		}
+
+
+
+	</script>
+</body>
+</html>
