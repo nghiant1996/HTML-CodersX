@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex1</title>
+</head>
+<body>
+	<p id="count"></p>
+	<button onclick="increase()">Increase</button>
+	<script type="text/javascript">
+		var count = 0;
+// Tạo 1 button mới nằm dưới p
+// Viết code sao cho khi click button đó thì giá trị biến `count` tăng 1 đơn vị và nội dung của `counter` cũng thay đổi theo`
+		function increase(){
+			count++;
+			render();
+		}
+
+		function render(){
+			var counter = document.getElementById('count');
+			counter.innerHTML = count;
+		}
+
+		render();
+
+	</script>
+
+</body>
+</html>
 

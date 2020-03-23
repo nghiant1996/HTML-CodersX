@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex2</title>
+</head>
+<body>
+	<input type="text" id="searchBox" placeholder="Search..." />
+	<button>Search</button>
+	<button onclick="clearData()">Clear</button>
+
+	<script type="text/javascript">
+		// Viết code sao cho khi ấn vào nút `Clear`, chữ trong input sẽ bị xoá
+       // Kiểm tra bằng cách gõ chữ vào ô tìm kiếm vào ấn `Clear`
+       var search = document.getElementById('searchBox');
+       var searchValue = search.value;
+       function clearData(){
+       		search.value = '';
+       		console.log('xxx');
+       }
+
+	</script>
+</body>
+</html>
 
